@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    char s1[100],s2[100];
+    int i,j,check=0,n;
+    printf("enter 1 st str :");scanf("%s",&s1);
+    printf("enter 2nd str :");scanf("%s",&s2);
+    for(n=0;s1[n]!='\0';n++);
+    for(i=0;i<n;i++)
+    {
+        check=0;
+        for(j=0;j<n;j++)
+        {
+            if(s1[i]==s2[j])
+            {
+                check=1;break;
+            }
+        }
+            if(check==0)
+             {
+                printf("! anagram");return 0;
+             }
+           
+    }
+        printf("anagram");
+      return 0;
+} 
+
